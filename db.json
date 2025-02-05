@@ -19,15 +19,6 @@
       "assigned_to": "João Silva"
     },
     {
-      "id": "3",
-      "title": "Atualizar documentação da API",
-      "created_on": "2025-01-22",
-      "author": "Carlos Mendes",
-      "type": "documentation",
-      "status": "Registrada",
-      "assigned_to": "Ana Costa"
-    },
-    {
       "id": "4",
       "title": "Implementar autenticação via OAuth",
       "created_on": "2025-01-23",
@@ -80,15 +71,6 @@
       "type": "evolucoes",
       "status": "Aguardando Versão",
       "assigned_to": "Amanda Ribeiro"
-    },
-    {
-      "id": "10",
-      "title": "Revisar textos no portal de atendimento",
-      "created_on": "2025-01-05",
-      "author": "Amanda Ribeiro",
-      "type": "atendimento",
-      "status": "Registrada",
-      "assigned_to": "Felipe Cardoso"
     },
     {
       "id": "11",
@@ -191,12 +173,12 @@
     },
     {
       "id": "22",
-      "title": "Criar exportação de relatórios em Excel",
-      "created_on": "2025-01-19",
-      "author": "Diego Ramos",
-      "type": "desenvolvimento",
+      "title": "Teste de edição",
+      "created_on": "2025-01-22",
+      "author": "Juliana Ferreira",
+      "type": "feature",
       "status": "Registrada",
-      "assigned_to": "Laura Campos"
+      "assigned_to": "André Costa"
     },
     {
       "id": "23",
@@ -271,7 +253,7 @@
       "assigned_to": "João Silva"
     },
     {
-      "id": 0,
+      "id": "0",
       "title": "hfksdkfkps",
       "created_on": "",
       "author": "",
@@ -280,7 +262,7 @@
       "assigned_to": ""
     },
     {
-      "id": 0,
+      "id": "0",
       "title": "Qualquer Coisa para testar",
       "created_on": "2003-03-25",
       "author": "usuario",
@@ -289,7 +271,7 @@
       "assigned_to": "usuario"
     },
     {
-      "id": 0,
+      "id": "0",
       "title": "adasda",
       "created_on": "",
       "author": "",
@@ -298,7 +280,7 @@
       "assigned_to": "usuario"
     },
     {
-      "id": 0,
+      "id": "0",
       "title": "dasdasd",
       "created_on": "2555-03-25",
       "author": "[object Object]",
@@ -307,13 +289,67 @@
       "assigned_to": "[object Object]"
     },
     {
-      "id": 0,
+      "id": "0",
       "title": "Teste",
       "created_on": "3114-02-25",
       "author": "Daniel Carvalho",
       "type": "bug",
       "status": "Análise Priorização",
       "assigned_to": "Ana Costa"
+    },
+    {
+      "id": "0",
+      "title": "hfksdkfkps",
+      "created_on": "5224-03-25",
+      "author": "Fernando Lima",
+      "type": "bug",
+      "status": "Aguardando Versão",
+      "assigned_to": "Gustavo Santos"
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
+    },
+    {
+      "id": "0",
+      "title": "",
+      "created_on": "",
+      "author": "",
+      "type": "",
+      "status": "",
+      "assigned_to": ""
     }
   ],
   "usuarios": [
