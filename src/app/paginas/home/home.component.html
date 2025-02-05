@@ -17,10 +17,20 @@
                         [autor]="tarefa.author"
                         [tipo]="tarefa.type"
                         [responsavel]="tarefa.assigned_to"
+                        (selecaoTarefa)="selecionarTarefaASerExcluida($event)"
                     ></app-cartao>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<app-modal 
+    *ngIf="exibirModal"
+    [titulo]="'Confirmação de Exclusão'"
+    [subtitulo]="'Tem certeza que deseja excluir esta tarefa? '"
+    [textoBotao1]="'Sim, Prosseguir'"
+    [acao1]="executarExclusao()"
+    [textoBotao2]="'Não, Cancelar'"
+    [acao2]="cancelarExclusao()"
+></app-modal>
 <app-rodape></app-rodape>

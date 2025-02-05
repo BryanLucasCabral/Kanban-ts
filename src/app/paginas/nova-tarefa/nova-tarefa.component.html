@@ -2,12 +2,12 @@
     [exibirFiltro]="false"
     [exibirBotaoNovaTarefa]="false"></app-cabecalho>
 <div class="container">
-    <h2 class="text-primary">Nova Tarefa</h2>
+    <h2 class="text-primary mb-3" *ngIf="!edicao">Nova Tarefa</h2>
+    <h2 class="text-primary mb-3" *ngIf="edicao">Editar Tarefa</h2>
     <div class="row justify-content-center mb-3">
         <div class="col-6 mb-3 text-start">
             <label for="titulo" class="form-label">Titulo</label>
             <input type="email" class="form-control" id="titulo"
-                placeholder="name@example.com"
                 [(ngModel)]= "novaTarefa.title">
         </div>
         <div class="col-6 mb-3">
@@ -45,4 +45,12 @@
         </div>
     </div>
 </div>
+<app-modal *ngIf="exibirModal"
+            [titulo]="'Confirmação'"
+            [subtitulo]="'Tarefa cadastrada com sucesso!'"
+            [textoBotao1]="'Cadastrar Nova Tarefa'"
+            [acao1] = "redirecionarNovaTarefa"
+            [textoBotao2]="'Ver Tarefas'"
+            [acao2] = "redirecionarParaHome"
+></app-modal>
 <app-rodape></app-rodape>

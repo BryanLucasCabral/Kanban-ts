@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CartaoComponent } from "../../components/cartao/cartao.component";
 import { CabecalhoComponent } from "../../components/cabecalho/cabecalho.component";
 import { RodapeComponent } from "../../components/rodape/rodape.component";
 import { Tarefa } from '../../interface/tarefa';
 import { TarefasService } from '../../servicos/tarefas.service';
 import { CommonModule } from '@angular/common';
+import { ModalComponent } from "../../components/modal/modal.component";
 
 @Component({
   selector: 'app-home',
-  imports: [CartaoComponent, CabecalhoComponent, RodapeComponent, CommonModule],
+  imports: [CartaoComponent, CabecalhoComponent, RodapeComponent, CommonModule, ModalComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -29,6 +30,9 @@ export class HomeComponent {
     'Reaberta'
   ]
 
+  @Input()exibirModal = false;
+  idTarefaASerExcluida: number = 0;
+
   constructor(private tarefasService: TarefasService) { }
 
   //Utilizado para inicializar o seviço quando o compoente é renderizado na página
@@ -46,5 +50,23 @@ export class HomeComponent {
 
   atualizarTipoSelecionado(novoTipo: string) : void{
     this.tipoSelecionado = novoTipo;
+  }
+
+  confirmarExclusao(): void {
+    this.exibirModal = true;
+  }
+  cancelarExclusao():void {
+    this.exibirModal = false;
+  }
+
+  executarExclusao(): void {
+    this.tarefasService.excluirTarefa(this.idTarefaASerExcluida).subscribe((resposta) => {
+      alert('Tarefa excluída com sucesso!');
+      window.location.reload();
+    })
+  }
+  selecionarTarefaASerExcluida(id: number): void {
+    this.idTarefaASerExcluida = id;
+    this.confirmarExclusao();
   }
 }
