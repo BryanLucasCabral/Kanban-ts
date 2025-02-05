@@ -1,20 +1,23 @@
-<div
-    class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5"
-    tabindex="-1" role="dialog" id="modalChoice">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content rounded-3 shadow">
-            <div class="modal-body p-4 text-center">
-                <h5 class="mb-0">Deseja prossguir? </h5>
-                <p class="mb-0">Você pode alterar depois!</p>
-            </div>
-            <div class="modal-footer flex-nowrap p-0">
-                <button type="button"
-                    class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0 border-end"><strong>Sim,
-                        Prosseguir</strong></button>
-                <button type="button"
-                    class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0"
-                    data-bs-dismiss="modal">Não, Obrigado</button>
+
+    <div
+        class="modal modal-overlay d-block p-4 py-md-5"
+        tabindex="-1" role="dialog" id="modalChoice">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-3 shadow">
+                <div class="modal-body p-4 text-center">
+                    <h5 class="mb-0">{{ titulo }}</h5>
+                    <p class="mb-0">{{ subtitulo }}</p>
+                </div>
+                <div class="modal-footer flex-nowrap p-0">
+                    <button type="button"
+                        class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0 border-end"
+                        (click)="aoClicarBotao1()">
+                        <strong>{{textoBotao1}}</strong></button>
+                    <button type="button"
+                        class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0"
+                        data-bs-dismiss="modal"
+                        (click)="aoClicarBotao2()">{{textoBotao2}}</button>
+                </div>
             </div>
         </div>
     </div>
-</div>

@@ -13,10 +13,11 @@ import { faPlus, faSignOut } from '@fortawesome/free-solid-svg-icons'
 export class CabecalhoComponent {
   faPlus = faPlus;
   faSignOut = faSignOut;
-  router: Router = new Router();
   tipoSelecionado: string = 'Todos'
   @Input() exibirFiltro = true;
   @Input() exibirBotaoNovaTarefa = true;
+
+  constructor(private router: Router){}
 
   //emissor de evento para o component home que vai usa-lo de entrada para mostrar as tarefas
   @Output() selecaoTipo = new EventEmitter<string>();
@@ -29,5 +30,9 @@ export class CabecalhoComponent {
   atualizarTipoSelecionado(tipo: string): void {
     this.tipoSelecionado = tipo;
     this.selecaoTipo.emit(tipo);
+  }
+
+  redirecionarNovaTarefa(): void { 
+    this.router.navigate(['novaTarefa']);
   }
 }
